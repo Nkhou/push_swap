@@ -96,6 +96,7 @@ FILES_BONUS = 	bonus/main.c\
 				bonus/src/ft_putstr.c\
 				bonus/src/ft_strcmp.c\
 				bonus/src/take_instra.c\
+				bonus/src/ft_printf_ok.c\
 
 OBJ = $(FILES:.c=.o)
 OBJ_BONUS = $(FILES_BONUS:.c=.o)

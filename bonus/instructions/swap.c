@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:13:39 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 17:14:14 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/23 22:27:05 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	swap(t_list **a)
 {
 	t_list	*tmp;
 
-	if (!(*a))
+	if (!(*a) || !(*a)->next)
 		return ;
 	tmp = (*a)->next;
 	(*a)->next = tmp->next;

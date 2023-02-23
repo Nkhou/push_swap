@@ -1,41 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   put_in_stac.c                                      :+:      :+:    :+:   */
+/*   ft_printf_ok.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 19:56:59 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/23 20:28:45 by nkhoudro         ###   ########.fr       */
+/*   Created: 2023/02/23 23:03:21 by nkhoudro          #+#    #+#             */
+/*   Updated: 2023/02/23 23:13:33 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void	put_in_stac(char **av, t_list **a, int ac)
+int	is_ok(t_list *a)
 {
-	char	**ss;
-	int		i;
-	int		j;
+	t_list	*head;
 
-	i = 1;
-	while (i < ac)
+	head = a;
+	while (head && head->next)
 	{
-		ss = ft_split(av[i], ' ');
-		j = 0;
-		while (ss[j])
-		{
-			if (ft_isnum(ss[j]) == 1)
-			{
-				ft_putstr ("Error\n");
-				free_ss(ss);
-				ft_lst_clear(a);
-				exit(0);
-			}
-			ft_lstadd_back(a, ft_lstnew(ft_atoi(ss[j])));
-			j++;
-		}
-		free_ss(ss);
-		i++;
+		if ((head->content) > ((head->next)->content))
+			return (0);
+		head = head->next;
+	}
+	return (1);
+}
+
+int	is_empty(t_list *b)
+{
+	if (!b)
+		return (1);
+	return (0);
+}
+
+void	ft_print_ok(t_list *a, t_list *b)
+{
+	if (is_ok(a) && is_empty(b))
+	{
+		ft_putstr("OK\n");
+		exit(0);
+	}
+	else
+	{
+		ft_putstr("KO\n");
+		exit(0);
 	}
 }

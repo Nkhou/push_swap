@@ -6,7 +6,7 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 19:39:57 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/23 04:59:16 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/23 23:18:32 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,9 @@ int		ft_strcmp(const char *s1, const char *s2);
 void	ft_putstr(char *s);
 void	lstadd_back(t_data **lst, t_data *new);
 t_data	*lstlast(t_data *lst);
-void	ft_dd_instraction(t_data **str, t_list **a, t_list **b);
+void	ft_dd_instraction(char **str, t_list **a, t_list **b);
 void	take_instra(char *instra, t_list **a, t_list **b);
 int		is_error(char *instra);
+void	ft_print_ok(t_list *a, t_list *b);
+int		is_ok(t_list *a);
 #endif
