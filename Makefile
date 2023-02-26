@@ -1,7 +1,7 @@
 NAME = push_swap
 NAME_BONUS = checker
 CC = cc
-CFLAGS =  -I./inc/ -Wall -Wextra -Werror
+CFLAGS =  -I./inc/push_swap.h -Wall -Wextra -Werror
 FILES = 		src/chunk.c\
 				src/instructions/pa.c\
 				src/instructions/pb.c\
@@ -38,7 +38,6 @@ FILES = 		src/chunk.c\
 				src/str/ft_atoi.c\
 				src/str/ft_bzero.c\
 				src/str/ft_calloc.c\
-				src/str/ft_isalpha.c\
 				src/str/ft_isdigit.c\
 				src/str/ft_split.c\
 				src/str/ft_strdup.c\
@@ -49,7 +48,9 @@ FILES = 		src/chunk.c\
 				src/str/put_in_stac.c\
 				src/str/ft_putstr.c\
 				src/str/take2top.c\
-				src/swap_a.c\
+				src/str/ft_strcmp.c\
+				src/str/ft_split_free.c\
+				src/main.c\
 
 FILES_BONUS = 	bonus/main.c\
 				bonus/get_next_line/get_next_line.c\
@@ -75,16 +76,12 @@ FILES_BONUS = 	bonus/main.c\
 				bonus/list/ft_lstaddfront.c\
 				bonus/list/ft_lstdelone.c\
 				bonus/list/ft_lstlast.c\
-				bonus/list/lstlast.c\
 				bonus/list/ft_lstnew_bonus.c\
 				bonus/list/ft_lstsize.c\
-				bonus/list/ft_lstnew.c\
-				bonus/list/lst_add_back.c\
 				bonus/src/check.c\
 				bonus/src/ft_atoi.c\
 				bonus/src/ft_bzero.c\
 				bonus/src/ft_calloc.c\
-				bonus/src/ft_isalpha.c\
 				bonus/src/ft_isrepeat.c\
 				bonus/src/ft_isdigit.c\
 				bonus/src/ft_split.c\
@@ -97,6 +94,7 @@ FILES_BONUS = 	bonus/main.c\
 				bonus/src/ft_strcmp.c\
 				bonus/src/take_instra.c\
 				bonus/src/ft_printf_ok.c\
+				bonus/src/ft_split_free.c\
 
 OBJ = $(FILES:.c=.o)
 OBJ_BONUS = $(FILES_BONUS:.c=.o)

@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 00:31:49 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/22 23:18:53 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:42:15 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../inc/push_swap.h"
 
 void	calldivide(t_list **a, t_list **b, int len, int size)
 {

@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 02:04:12 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/22 23:22:32 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:41:22 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../inc/push_swap.h"
 
 void	position(t_list **a, int position)
 {

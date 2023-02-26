@@ -6,14 +6,14 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 01:55:08 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 18:22:58 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/26 00:49:46 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/checker.h"
 
-void	ss(t_list *b, t_list *a)
+void	ss(t_list **b, t_list **a)
 {
-	swap(&a);
-	swap(&b);
+	swap(a);
+	swap(b);
 }

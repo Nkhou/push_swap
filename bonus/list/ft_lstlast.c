@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 18:16:08 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 16:52:08 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:45:39 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/checker.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

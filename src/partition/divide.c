@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 02:02:08 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 17:32:46 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:41:22 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../inc/push_swap.h"
 
 void	divide(t_list **a, t_list **b, int len, int d)
 {

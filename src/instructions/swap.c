@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 19:13:39 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/23 22:45:46 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:42:39 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../inc/push_swap.h"
 
 void	swap(t_list **a)
 {

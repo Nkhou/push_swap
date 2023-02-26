@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 19:56:59 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/23 20:28:45 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 23:20:43 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/checker.h"
 
 void	put_in_stac(char **av, t_list **a, int ac)
 {

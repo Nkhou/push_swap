@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 16:55:57 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/22 23:23:06 by nkhoudro         ###   ########.fr       */
+/*   Created: 2023/02/25 22:52:29 by nkhoudro          #+#    #+#             */
+/*   Updated: 2023/02/26 01:30:45 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strdup(const char *s1);
 t_list	*ft_lstnew(int content);
 int		ft_isdigit(int c);
 long	ft_isnum(char *a);
-// long  cheaks(t_list *a);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -42,7 +41,6 @@ void	*ft_calloc(size_t count, size_t size);
 void	ft_bzero(void *s, size_t n);
 void	ft_lstdelone(t_list *lst);
 char	**ft_split(char const *s, char c);
-int		ft_isalpha(int c);
 int		ft_isrepeat(t_list *a);
 int		check(t_list *a);
 void	addpos(t_list *a);
@@ -77,8 +75,10 @@ void	rrr(t_list **b, t_list **a);
 int		put_in_stac(char **av, t_list **a, int ac);
 int		ft_isrepeat(t_list *a);
 void	free_ss(char **ss);
-void	ss(t_list *b, t_list *a);
+void	ss(t_list **b, t_list **a);
 void	ft_putstr(char *s);
 void	less(char **str, t_list **a);
+int		ft_strcmp(const char *s1);
+void	ft_free(char **p, int last);
 
 #endif

@@ -6,15 +6,15 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 01:55:08 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 18:28:17 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/26 00:52:40 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../inc/push_swap.h"
 
-void	ss(t_list *b, t_list *a)
+void	ss(t_list **b, t_list **a)
 {
-	swap(&a);
-	swap(&b);
+	swap(a);
+	swap(b);
 	ft_putstr("ss\n");
 }

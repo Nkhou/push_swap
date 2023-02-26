@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lst_add_back.c                                     :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 13:33:02 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 13:39:35 by nkhoudro         ###   ########.fr       */
+/*   Created: 2023/02/25 14:35:08 by nkhoudro          #+#    #+#             */
+/*   Updated: 2023/02/26 01:16:21 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/push_swap.h"
 
-void	lstadd_back(t_data **lst, t_data *new)
+int	ft_strcmp(const char *s1)
 {
-	if (!lst || !new)
-		return ;
-	if (*lst == 0)
+	unsigned char	*my_s1;
+	size_t			i;
+
+	i = 0;
+	my_s1 = (unsigned char *)s1;
+	while (my_s1[i] != '\0')
 	{
-		(*lst) = new;
-		return ;
+		if (my_s1[i] >= '0' && my_s1[i] <= '9')
+			return (1);
+		i++;
 	}
-	lstlast(*lst)->next = new;
+	return (0);
 }

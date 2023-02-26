@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 20:52:16 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/23 23:16:28 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/26 01:17:57 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../inc/checker.h"
 
 int	is_error(char *instra)
 {
@@ -36,17 +36,21 @@ int	is_error(char *instra)
 	return (1);
 }
 
-void	ft_dd_instraction(char **str, t_list **a, t_list **b)
+char	*ft_dd_instraction(t_list **a, t_list **b)
 {
-	(*str) = get_next_line(0);
-	if (!(*str))
-		return ;
-	if (is_error(*str) == 1)
+	char	*str;
+
+	str = get_next_line(0);
+	if (!str)
+		return (0);
+	if (is_error(str) == 1)
 	{
 		ft_putstr("ERROR\n");
-		exit(0);
+		free(str);
+		exit(1);
 	}
-	take_instra((*str), a, b);
+	take_instra(str, a, b);
+	return (str);
 }
 
 void	cheek_repeat(t_list *a)
@@ -70,11 +74,16 @@ int	main(int ac, char**av)
 		cheek_repeat(a);
 		while (1)
 		{
-			ft_dd_instraction(&str, &a, &b);
+			str = ft_dd_instraction(&a, &b);
 			if (!(str))
+			{
 				break ;
+			}
 			free(str);
 		}
 		ft_print_ok(a, b);
+		ft_lst_clear(&b);
+		ft_lst_clear(&a);
 	}
+	return (0);
 }

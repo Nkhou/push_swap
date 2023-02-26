@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 02:07:44 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 17:37:43 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:41:22 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../inc/push_swap.h"
 
 int	ft_isrepeat(t_list *a)
 {

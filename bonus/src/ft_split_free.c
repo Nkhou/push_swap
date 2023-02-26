@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_split_free.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 01:35:53 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 16:52:18 by nkhoudro         ###   ########.fr       */
+/*   Created: 2023/02/25 20:51:47 by nkhoudro          #+#    #+#             */
+/*   Updated: 2023/02/25 21:41:22 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/push_swap.h"
 
-t_data	*lstnew(char *content)
+void	ft_free(char **p, int last)
 {
-	t_data	*lst;
+	int	i;
 
-	lst = (t_data *)malloc(sizeof(t_data));
-	if (!lst || !content)
-		return (NULL);
-	lst->content = content;
-	lst->next = NULL;
-	return (lst);
+	i = 0;
+	while (i < last)
+	{
+		free(p[i]);
+		i++;
+	}
+	free(p);
 }

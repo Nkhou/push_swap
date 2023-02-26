@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 16:04:00 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/08 18:35:28 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:41:22 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../inc/push_swap.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {

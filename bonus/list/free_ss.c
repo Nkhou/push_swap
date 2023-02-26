@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 19:58:33 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 16:49:01 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/26 01:41:45 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/checker.h"
 
 void	free_ss(char **ss)
 {

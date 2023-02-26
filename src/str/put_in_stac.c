@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/18 19:56:59 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/23 00:26:41 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 23:18:55 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../inc/push_swap.h"
 
 void	less(char **str, t_list **a)
 {

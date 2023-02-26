@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 17:36:36 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/18 23:15:53 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:45:39 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/checker.h"
 
 void	ft_bzero(void *s, size_t n)
 {

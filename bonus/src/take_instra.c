@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 04:47:48 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/23 20:36:12 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/26 00:50:56 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/checker.h"
 
 void	take_instra(char *instra, t_list **a, t_list **b)
 {
@@ -33,7 +33,7 @@ void	take_instra(char *instra, t_list **a, t_list **b)
 	else if (ft_strcmp(instra, "rrr\n") == 0)
 		rrr(b, a);
 	else if (ft_strcmp(instra, "ss\n") == 0)
-		ss(*a, *b);
+		ss(a, b);
 	else if (ft_strcmp(instra, "rrb\n") == 0)
 		rrb(b);
 }

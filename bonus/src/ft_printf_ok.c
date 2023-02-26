@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/23 23:03:21 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/23 23:13:33 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/26 00:38:01 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/checker.h"
 
 int	is_ok(t_list *a)
 {
@@ -36,13 +36,9 @@ int	is_empty(t_list *b)
 void	ft_print_ok(t_list *a, t_list *b)
 {
 	if (is_ok(a) && is_empty(b))
-	{
 		ft_putstr("OK\n");
-		exit(0);
-	}
 	else
 	{
 		ft_putstr("KO\n");
-		exit(0);
 	}
 }

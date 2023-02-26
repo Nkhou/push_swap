@@ -5,17 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/18 19:39:57 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/23 23:18:32 by nkhoudro         ###   ########.fr       */
+/*   Created: 2023/02/26 01:17:16 by nkhoudro          #+#    #+#             */
+/*   Updated: 2023/02/26 01:35:20 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
 # define CHECKER_H
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
-# endif
+# define BUFFER_SIZE 10
 
 # include <stdio.h>
 # include <unistd.h>
@@ -43,7 +41,6 @@ typedef struct s_data
 t_list	*ft_lstnew(int content);
 int		ft_isdigit(int c);
 long	ft_isnum(char *a);
-// long  cheaks(t_list *a);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -57,7 +54,6 @@ void	*ft_calloc(size_t count, size_t size);
 void	ft_bzero(void *s, size_t n);
 void	ft_lstdelone(t_list *lst);
 char	**ft_split(char const *s, char c);
-int		ft_isalpha(int c);
 int		ft_isrepeat(t_list *a);
 int		check(t_list *a);
 void	addpos(t_list *a);
@@ -70,7 +66,7 @@ void	reverse_rotate(t_list **b);
 void	sa(t_list **a);
 void	sb(t_list **b);
 void	swap(t_list **a);
-void	ss(t_list *b, t_list *a);
+void	ss(t_list **b, t_list **a);
 void	push(t_list **to, t_list **send);
 void	push_a(t_list **a, t_list **b);
 void	push_b(t_list **a, t_list **b);
@@ -79,14 +75,13 @@ void	rrr(t_list **b, t_list **a);
 void	put_in_stac(char **av, t_list **a, int ac);
 char	*get_next_line(int fd);
 void	free_ss(char **ss);
-t_data	*lstnew(char *content);
 int		ft_strcmp(const char *s1, const char *s2);
 void	ft_putstr(char *s);
-void	lstadd_back(t_data **lst, t_data *new);
-t_data	*lstlast(t_data *lst);
-void	ft_dd_instraction(char **str, t_list **a, t_list **b);
+char	*ft_dd_instraction(t_list **a, t_list **b);
 void	take_instra(char *instra, t_list **a, t_list **b);
 int		is_error(char *instra);
 void	ft_print_ok(t_list *a, t_list *b);
 int		is_ok(t_list *a);
+void	ft_free(char **p, int last);
+
 #endif

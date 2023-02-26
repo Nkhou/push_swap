@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 01:54:19 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 18:28:10 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:42:39 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../inc/push_swap.h"
 
 void	rrr(t_list **b, t_list **a)
 {

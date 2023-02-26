@@ -6,24 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 23:22:29 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/18 23:16:29 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:45:39 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
-
-static void	ft_free(char **p, int last)
-{
-	int	i;
-
-	i = 0;
-	while (i < last)
-	{
-		free(p[i]);
-		i++;
-	}
-	free(p);
-}
+#include "../../inc/checker.h"
 
 static int	ft_skip(char const *s, int i, char c);
 
@@ -57,8 +44,20 @@ static int	ft_malloc(char const *s, char **p, char c, int nwords)
 
 static int	ft_skip(char const *s, int i, char c)
 {
+	int	j;
+
+	j = 0;
 	while (s[i] && s[i] == c)
+	{
+		if (s[i] >= '0' && s[i] <= '9')
+			j++;
 		i++;
+	}
+	if (j == 0 && s[i] == '\0')
+	{
+		ft_putstr ("Error\n");
+		exit(1);
+	}
 	return (i);
 }
 
@@ -80,6 +79,15 @@ static int	ft_word(char const *s, char c)
 	return (words);
 }
 
+void	prot(char const *s)
+{
+	if (!s || *s == '\0')
+	{
+		ft_putstr ("Error\n");
+		exit(1);
+	}
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**p;
@@ -88,8 +96,7 @@ char	**ft_split(char const *s, char c)
 	int		j;
 	int		r;
 
-	if (!s)
-		return (NULL);
+	prot(s);
 	count = ft_word(s, c);
 	p = (char **) malloc(sizeof(char *) * (count + 1));
 	if (!p || ft_malloc(s, p, c, count) == 0)

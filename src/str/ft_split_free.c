@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   lstlast.c                                          :+:      :+:    :+:   */
+/*   ft_split_free.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/20 13:36:26 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 16:52:35 by nkhoudro         ###   ########.fr       */
+/*   Created: 2023/02/25 20:48:16 by nkhoudro          #+#    #+#             */
+/*   Updated: 2023/02/25 21:41:22 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/push_swap.h"
 
-t_data	*lstlast(t_data *lst)
+void	ft_free(char **p, int last)
 {
-	if (!lst || !(lst->next))
-		return (lst);
-	while (lst && lst->next)
-		lst = lst->next;
-	return (lst);
+	int	i;
+
+	i = 0;
+	while (i < last)
+	{
+		free(p[i]);
+		i++;
+	}
+	free(p);
 }

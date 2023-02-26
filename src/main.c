@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/15 18:25:26 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/18 23:16:03 by nkhoudro         ###   ########.fr       */
+/*   Created: 2023/01/12 16:37:21 by nkhoudro          #+#    #+#             */
+/*   Updated: 2023/02/26 00:18:15 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../inc/push_swap.h"
 
-int	ft_isalpha(int c)
+int	main(int ac, char **av)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z'))
-		return (1);
+	t_list	*a;
+	int		len;
+	t_list	*b;
+
+	if (ac > 1)
+	{
+		len = put_in_stac(av, &a, ac);
+		if (ft_isrepeat(a) == 1)
+		{
+			ft_putstr ("Error\n");
+			ft_lst_clear(&a);
+			exit(1);
+		}
+		addpos(a);
+		chunk(&a, &b, len);
+		ft_lst_clear(&a);
+	}
 	return (0);
 }

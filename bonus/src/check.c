@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/09 20:40:17 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 16:53:53 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:45:39 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/checker.h"
 
 int	check(t_list *a)
 {

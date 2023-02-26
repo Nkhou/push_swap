@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 01:50:09 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 18:16:44 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 21:45:39 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/checker.h"
 
 void	push_b(t_list **b, t_list **a)
 {

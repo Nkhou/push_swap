@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 17:52:21 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/20 12:46:46 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 23:16:06 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "checker.h"
+#include "../../inc/checker.h"
 
 static int	ft_at(const char *str, int sgn)
 {
@@ -20,6 +20,11 @@ static int	ft_at(const char *str, int sgn)
 
 	i = 0;
 	res = 0;
+	if (!(str))
+	{
+		ft_putstr("Error\n");
+		exit(EXIT_FAILURE);
+	}
 	while (str[i] >= '0' && str[i] <= '9' && str[i] != '\0')
 	{
 		tmp = res;
@@ -43,7 +48,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sgn = 1;
 	res = 0;
-	while ((str[i] > 8 && str[i] < 14) || (str[i] == ' '))
+	while (str[i] == ' ')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{

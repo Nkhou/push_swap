@@ -6,11 +6,11 @@
 /*   By: nkhoudro <nkhoudro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 17:52:21 by nkhoudro          #+#    #+#             */
-/*   Updated: 2023/02/22 22:35:24 by nkhoudro         ###   ########.fr       */
+/*   Updated: 2023/02/25 23:18:45 by nkhoudro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../inc/push_swap.h"
 
 int	ft_at(const char *str, int sgn)
 {
@@ -48,12 +48,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sgn = 1;
 	res = 0;
-	if (!str)
-	{
-		ft_putstr("Error\n");
-		exit(EXIT_FAILURE);
-	}
-	while ((str[i] > 8 && str[i] < 14) || (str[i] == ' '))
+	while (str[i] == ' ')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
